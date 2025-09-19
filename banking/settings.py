@@ -90,15 +90,6 @@ DATABASES = {
         'PORT' : env('DB_PORT', default='5432'),
     },
     
-    #'supabase': {
-    # 'ENGINE': 'django.db.backends.postgresql',
-    # 'HOST':
-    # 'NAME':
-    # 'USER':
-    # 'PASSWORD':
-    # 'PORT' :
-    #},
-    
     'local': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'banking.sqlite3',
