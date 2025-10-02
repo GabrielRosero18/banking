@@ -20,11 +20,12 @@ class User(models.Model):
 class Country(models.Model):
     name = models.CharField(max_length=100)
     abrev = models.CharField(max_length=10, null=True, blank=True)
+    status = models.BooleanField(default=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return f"{self.name} {self.abrev}" 
+        return f"{self.name} {self.abrev} {'Active' if self.status else 'Inactive'}" 
 
     
 class Department(models.Model):
