@@ -92,11 +92,11 @@ DATABASES = {
 
     'supabase': {
         'ENGINE': 'django.db.backends.postgresql',
-        'HOST': env('Supabase_HOST', default='localhost'),
+        'HOST': env('Supabase_HOST',),
         'NAME': env('Supabase_DB_NAME'),
         'USER': env('Supabase_DB_USER'),
         'PASSWORD': env('Supabase_DB_PASSWORD'),
-        'PORT': env('Supabase_DB_PORT', default='5432'),
+        'PORT': env('Supabase_DB_PORT'),
     },
 
     'local': {
